@@ -10,13 +10,13 @@ public class Main {
     Scanner scanner = new Scanner(System.in);
 
     System.out.print("1番目の数字を入力してください: ");
-    String firstNumber = scanner.nextLine();
+    String firstNumber = scanner.next();
 
     System.out.print("演算子を入力してください。(+,-,*,/): ");
-    String operator = scanner.nextLine();
+    String operator = scanner.next();
 
     System.out.print("2番目の数字を入力してください: ");
-    String secondNumber = scanner.nextLine();
+    String secondNumber = scanner.next();
 
     //入力された数値と演算子のチェック
     boolean isNumber = CheckData.checkNumber(firstNumber);
