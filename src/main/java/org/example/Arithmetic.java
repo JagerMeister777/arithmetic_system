@@ -25,14 +25,22 @@ public class Arithmetic {
       }
 
       case "/" -> {
-        double result = (double) firstNumber / secondNumber;
-
         //ゼロ割り算を考慮
-        if (Double.isInfinite(result)){
-          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
-        }else{
+        try {
+          double result = (double) firstNumber / secondNumber;
           System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
+        }catch (ArithmeticException e) {
+          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
         }
+
+//        double result = (double) firstNumber / secondNumber;
+//
+//        //ゼロ割り算を考慮
+//        if (Double.isInfinite(result)){
+//          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
+//        }else{
+//          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
+//        }
       }
 
       default -> {
