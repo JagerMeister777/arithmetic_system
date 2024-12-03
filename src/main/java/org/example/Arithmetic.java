@@ -1,6 +1,5 @@
 package org.example;
 
-import java.io.IOException;
 import java.text.Normalizer;
 
 public class Arithmetic {
