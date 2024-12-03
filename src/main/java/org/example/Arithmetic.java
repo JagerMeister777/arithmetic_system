@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.IOException;
 import java.text.Normalizer;
 
 public class Arithmetic {
@@ -26,7 +27,13 @@ public class Arithmetic {
 
       case "/" -> {
         double result = (double) firstNumber / secondNumber;
-        System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
+
+        //ゼロ割り算を考慮
+        if (Double.isInfinite(result)){
+          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
+        }else{
+          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
+        }
       }
 
       default -> {
