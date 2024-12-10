@@ -30,14 +30,14 @@ public class Arithmetic {
           double result = (double) firstNumber / secondNumber;
           System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
         }catch (ArithmeticException e) {
-          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
+          System.out.println("未定義。0では割ることができません。");
         }
 
 //        double result = (double) firstNumber / secondNumber;
 //
 //        //ゼロ割り算を考慮
 //        if (Double.isInfinite(result)){
-//          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, 0));
+//          System.out.println("未定義。0では割ることができません。");
 //        }else{
 //          System.out.println(Message.outPutMessage(firstNumber, operator, secondNumber, result));
 //        }
